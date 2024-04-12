@@ -1,0 +1,96 @@
+.nav {
+    padding-top: 60px;
+    padding-bottom: 65px;
+    position: relative;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .nav__list{
+            font-size: 12px;
+            opacity: 0.67;
+            letter-spacing: 0.12em;
+            display: flex;
+            gap: 50px;
+
+            @include mobile() {
+                display: none;
+                gap: 40px;
+                font-size: 16px;
+            }
+                li{
+                    position: relative;
+                }
+                
+                li::after{
+                    content: '';
+                    position: absolute;
+                    background: $white-color;
+                    height: 1px;
+                    width: 100%;
+                    left: 0;
+                    bottom: -10px;
+                    opacity: 0;
+                    transition: opacity .10s ease;
+                }
+
+                li:hover::after{
+                    opacity: 1;
+                }
+
+                li a{
+                    color: $white-color;
+                }
+        }
+        .nav__btn{
+            display: none;
+
+            @include mobile(){
+                display: block;
+            }
+        }
+    }
+
+    &__mobile{
+        @include mobile() {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background: black;
+            justify-content: start;
+            gap: 65px;
+        }
+
+        .nav__list{
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .nav__btn{
+            @include mobile{
+                position: fixed;
+                top: 45px;
+                right: 50px;
+            }
+        }
+    }
+}
+
+
+
+
+
+  

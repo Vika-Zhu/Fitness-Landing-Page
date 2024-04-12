@@ -1,0 +1,10 @@
+.logo{
+   color: $white-color;
+   font-weight: 600;
+   letter-spacing: 0.06em;
+   font-size: 18px;
+
+   @include mobile() {
+      font-size: 25px;
+   }
+}

@@ -1,0 +1,162 @@
+.header {
+    padding-top: 65px;
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile{
+            flex-direction: column;
+        }
+        .header__left-content{
+            max-width: 871px;
+            position: relative;
+            z-index: 5;
+
+            @include tablet{
+                max-width: 700px;
+            }
+
+            .header__badge {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                max-width: 329px;
+                border-radius: 200px;
+                background-color: $background-color-opacity;
+                color: $white-color;
+                padding: 5px 15px 5px 5px;
+                
+                &--accent {
+                    border-radius: 200px;
+                    background: #25ab75;
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 180%;
+                    letter-spacing: 0.15em;
+                    padding: 4px 9px;
+                }
+
+                &--text {
+                    font-size: 12px;
+                    line-height: 150%;
+                    letter-spacing: 0.04em;
+                    opacity: 0.8;  
+
+                    @include mobile{
+                        font-size: 11px;
+                    }
+                }
+
+                @include mobile{
+                    width: 100%;
+                    gap: 11px;
+                    font-size: 12px;
+                }
+            }
+
+            .header__title{
+                margin-top: 31px;
+                font-weight: 600;
+                font-size: 200px;
+                line-height: 85%;
+                letter-spacing: -0.01em;
+                color: $white-color;
+                position: relative;
+                left: -5px;
+
+                @include desktop() {
+                    font-size: 150px;
+                }
+
+                @include tablet() {
+                    font-size: 120px;
+                }     
+                
+                @include mobile{
+                    font-size: 71px;
+                }
+            }
+
+            .header__text {
+                margin-top: 42px;
+                font-size: 16px;
+                line-height: 181%;
+                letter-spacing: 0.03em;
+                color: $white-color;
+                max-width: 600px;
+                opacity: 0.5;
+
+                @include desktop() {
+                    max-width: 500px;
+                }
+                @include tablet() {
+                    max-width: 467px;
+                }
+                @include mobile{
+                    font-size: 13px;
+                    margin-top: 15px;
+                }
+            }
+
+            .header_buttons {
+                margin-top: 50px;
+                display: flex;
+                gap: 30px;
+
+                @include mobile{
+                    flex-direction: column;
+                    gap: 15px;
+                    margin-top: 30px;
+                }
+            }
+
+        }
+
+        .header__right{
+            display: flex;
+            position: relative;
+
+            @include mobile{
+                justify-content: center;
+            }
+            
+            .header__image{
+                width: 550px;
+                height: auto;
+                overflow: hidden;
+                position: absolute;
+                top: 17px;
+                left: -380px;
+
+                @include tablet() {
+                    width: 400px;
+                    top: -2px;
+                    left: -272px;
+                }
+                @include mobile{
+                    display: none;
+                }
+            }
+
+            .header__metrics {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                z-index: 5;
+                margin-top: 122px;
+
+                @include mobile{
+                    flex-direction: row;
+                    margin-top: 40px;
+                    gap: 10px;
+                }
+            }
+        }
+        
+    }   
+}
+
+
+
+
